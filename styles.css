@@ -1,0 +1,358 @@
+/* 基本样式设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+    /* 版心宽度1200px */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* 页头样式 */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: #3498db;
+}
+
+/* 内容区域 */
+.section {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* 个人简介 */
+#about .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#about ul {
+  list-style-type: none;
+}
+
+#about ul li {
+  margin: 10px 0;
+}
+
+#about ul li strong {
+  font-weight: bold;
+}
+
+/* 日志 */
+#blog a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#blog a:hover {
+  color: #3498db;
+}
+
+#blog ul {
+  list-style-type: none;
+}
+
+#blog ul li {
+  margin: 10px 0;
+}
+
+/* 相册 */
+/* 样式：轮播图 */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  max-width: 1250px;
+  /* 设置最大宽度 */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+    border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* 保持图片的宽高比例 */
+  object-fit: cover;
+  /* 保持图片的填充，同时确保图片不变形 */
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#gallery a {
+  display: inline-block;
+  margin-top: 20px;
+  /* 给"查看更多日志"链接添加上边距 */
+}
+/* 留言板 */
+#guestbook .message-list ul {
+  list-style-type: none;
+}
+
+#guestbook .message-list ul li {
+  margin-bottom: 10px;
+}
+
+#guestbook .message-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#guestbook .message-form button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#guestbook .message-form button:hover {
+  background-color: #2980b9;
+}
+
+/* 相册列表 */
+#imglist ul{
+list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 每行3个图片 */
+  gap: 20px;
+  /* 图片之间的间距 */
+  padding-left: 0;
+}
+#imglist ul li {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#imglist ul li:hover {
+  transform: scale(1.05);
+  /* 鼠标悬停时，图片轻微放大 */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* 增强阴影效果 */
+}
+#imglist img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 保证图片完整覆盖 */
+  border-radius: 8px;
+}
+/* 留言 */
+/* 留言板部分 */
+#message-history {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+#message-history h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#message-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#message-list .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ddd;
+}
+
+.nickname {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #888;
+}
+
+.message-content {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* 留言表单 */
+#message-form {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#message-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004080;
+}
+/* 页脚样式 */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

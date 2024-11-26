@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人网站 - 首页</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>个人网站</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">个人简介</a></li>
+          <li><a href="blog-list.html">日志</a></li>
+          <li><a href="gallery-list.html">相册</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 个人简介 -->
+    <section id="about" class="section">
+      <h2>Reese</h2>
+      <div class="profile">
+        <img src="image/toxiang.jpg" alt="个人头像" class="avatar">
+       <p style="font-weight: bold;">Fortune favors the bold.</p>
+      </div>
+    </section>
+
+    <!-- 日志 -->
+    <section id="blog" class="section">
+      <h2>日志</h2>
+      <ul>
+        <li><a href="blog-detail.html?blogId=1">My personal experience</a></li>
+        <li><a href="blog-detail.html?blogId=2">My plans for the future</a></li>
+      </ul>
+      <a href="blog-list.html">More</a>
+    </section>
+
+    <!-- 相册 -->
+    <section id="gallery" class="section">
+      <h2>photo album</h2>
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="image/banner1.jpg" alt="相册图片">
+          <img src="image/banner2.jpg" alt="相册图片">
+          <img src="image/banner3.jpg" alt="相册图片">
+          <img src="image/banner4.jpg" alt="相册图片">
+          <img src="image/banner5.jpg" alt="相册图片">
+        </div>
+        <div class="carousel-controls">
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
+      <a href="gallery-list.html">See more albums
+</a>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Reese | 版权所有</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

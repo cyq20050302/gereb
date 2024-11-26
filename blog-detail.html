@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日志详情</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+</style>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>个人网站 - 日志详情</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="blog-list.html">日志</a></li>
+          <li><a href="gallery-list.html">相册</a></li>
+          <li><a href="message-board.html">留言</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+  <section id="blog-detail">
+    <h2>日志标题</h2>
+    <div id="blog-content">
+      <!-- 日志内容动态填充 -->
+    </div>
+  </section>
+</main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Reese | 版权所有</p>
+    </div>
+  </footer>
+</body>
+
+<script>
+  // 获取URL中的日志ID参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get('blogId');
+
+    // 通过日志ID加载对应的日志内容
+    const blogContent = {
+      1: {
+        title: " - Personal Experience -",
+        content: `<p>&nbsp &nbsp Academic major: From 2021 to now, I have studied food science and nutrition. During my time in school, I have mastered the relevant knowledge of human anatomy, physiology, chemistry and biology, and I am particularly interested in physiology, biochemistry and organic chemistry.<br>
+
+&nbsp &nbsp Daily hobbies: close to nature, love flowers and plants, appreciate flowers and green plants, explore nature, especially forest parks, and like to breathe the breath of the forest. Hiking, climbing mountains, and meditation quietly at the same time.<br>
+&nbsp &nbsp Personal literacy: Painting, especially watercolor painting of flowers and plants, is participating in more professional painting training.<br>          
+&nbsp &nbsp I have certain writing skills, have the habit of narrating and writing essays, and I have studied classical literature and poetry.<br>
+&nbsp &nbsp Playing traditional Chinese music instruments, including erhu and zither, is learning the guqin by himself.<br>
+&nbsp &nbsp I am fond of history and culture. I have a certain curiosity and understanding of the world's ancient civilizations. I like to explore the art and architecture of ancient civilizations. I am especially fond of ancient Chinese culture, including classical architecture, ancient costumes, ancient culture, legends and totem verification.<br>
+&nbsp &nbsp Love sports, participate in public welfare long-distance running and cycling, and maintain Pilates and yoga exercises on a daily basis.<br>
+&nbsp &nbsp I like public welfare, pay attention to human nutrition and food safety, pay attention to animal welfare protection, and pay attention to environmental ecological protection. I have participated in public welfare publicity and donation activities many times.
+</p>`
+      },
+      2: {
+        title: " - Future Plan -",
+        content: `&nbsp &nbsp Academic improvement: Continue to explore the academic interests and research abilities, hoping to make contributions in the broad field of life and health. I plan to continue my studies and gradually develop my ability to experiment independently, think critically, and complete scientific research projects independently. 
+Life plan: Complete fat loss, gain appropriate muscle mass, maintain a scientific and healthy lifestyle, and change work and rest habits to go to bed early and get up early. More：Travel and explore more countries around the world, and insist on participating in charity actions...`
+      },
+    };
+
+    // 显示对应的日志内容
+    if (blogId && blogContent[blogId]) {
+      document.getElementById('blog-detail').querySelector('h2').textContent = blogContent[blogId].title;
+      document.getElementById('blog-content').innerHTML = blogContent[blogId].content;
+    } else {
+      document.getElementById('blog-content').innerHTML = `<p>日志不存在或已被删除。</p>`;
+    }
+
+</script>
+</html>
